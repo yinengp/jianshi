@@ -8,6 +8,11 @@ import pymysql.cursors
 from server import app
 conf = app.config
 
+conf['MYSQL_LOCAL_HOST'] = '127.0.0.1'
+conf['MYSQL_USER'] = 'root'
+conf['MYSQL_PASSWORD'] = 'Pyn123456'
+conf['MYSQL_DB_NAME'] = 'jianshu_db'
+
 
 def _execute_sql_file(sql_file):
     """Initializes the database."""

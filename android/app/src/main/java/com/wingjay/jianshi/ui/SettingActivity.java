@@ -185,8 +185,9 @@ public class SettingActivity extends BaseActivity {
   @OnClick(R.id.send_feedback)
   void sendFeedback() {
     Intent i = new Intent(Intent.ACTION_SENDTO);
-    i.setType("*/*");
-    i.setData(Uri.parse("mailto:"));
+//    i.setType("*/*");
+//    i.setData(Uri.parse("mailto:"));
+    i.setDataAndType(Uri.parse("mailto:"), "*/*");
     i.putExtra(Intent.EXTRA_EMAIL, new String[]{"yinjiesh@126.com"});
     i.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.feedback_email_subject));
     i.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.feedback_email_prefix));

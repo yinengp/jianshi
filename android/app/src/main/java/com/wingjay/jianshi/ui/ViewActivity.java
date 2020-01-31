@@ -150,12 +150,13 @@ public class ViewActivity extends BaseActivity {
               return;
             }
             IntentUtil.shareLinkWithImage(ViewActivity.this,
-                stringShareContentPair.second,
-                Uri.fromFile(new File(stringShareContentPair.first)));
+                stringShareContentPair.second, stringShareContentPair.first);
+//                Uri.fromFile(new File(stringShareContentPair.first)));
           }
         }, new Action1<Throwable>() {
           @Override
           public void call(Throwable throwable) {
+            dialog.dismiss();
             makeToast(getString(R.string.share_failure));
             Timber.e(throwable, "screenshot share failure");
           }

@@ -92,7 +92,7 @@ public class ScreenshotManager {
                 File imageFile = new File(path);
                 try {
                   FileOutputStream outputStream = new FileOutputStream(imageFile);
-                  bitmap.compress(Bitmap.CompressFormat.JPEG, 90, new BufferedOutputStream(outputStream));
+                  bitmap.compress(Bitmap.CompressFormat.JPEG, 100, new BufferedOutputStream(outputStream));
                   outputStream.flush();
                   outputStream.close();
                   return Observable.just(path);

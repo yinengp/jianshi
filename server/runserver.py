@@ -8,4 +8,4 @@ print localhost
 from server import app as application
 
 if __name__ == "__main__":
-    application.run(host=localhost, debug=True)
+    application.run(host='192.168.1.101', debug=True)

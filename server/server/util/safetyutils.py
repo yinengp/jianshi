@@ -9,6 +9,10 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from server import app
 conf = app.config
 
+conf['DEFAULT_KEY'] = 'abcdefghijklmnop'
+conf['AUTH_TOKEN_ENCRYPT_KEY'] = 'abcdefghijklmnop'
+conf['SYNC_TOKEN_ENCRYPT_KEY'] = 'abcdefghijklmnop'
+
 SECURE_HASH_METHOD = 'pbkdf2:sha1:1111'
 DEFAULT_KEY = conf['DEFAULT_KEY']
 AUTH_TOKEN_ENCRYPT_KEY = conf['AUTH_TOKEN_ENCRYPT_KEY']

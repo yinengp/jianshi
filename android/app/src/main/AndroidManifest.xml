@@ -69,6 +69,17 @@
             android:name="io.fabric.ApiKey"
             android:value="a97c3efc76ce98af59ab9f8fa8b7c2ad7468f78c"/>
 
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.wingjay.android.jianshi.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
     </application>
 
     <uses-permission
